@@ -1,56 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AC Repair Dubai</title>
+<title>CoreAir Dubai</title>
 
 <style>
-body { margin:0; font-family: Arial; background:#f4f6f9; }
 
-h1,h2,h3,p { margin:0 0 10px; }
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f5f7fb;
+color:#111;
+}
 
-.container { width:90%; max-width:1000px; margin:auto; }
+.container{
+width:90%;
+max-width:1100px;
+margin:auto;
+}
 
 /* HEADER */
-header { background:#fff; padding:10px 0; border-bottom:1px solid #ddd; }
 
-nav { display:flex; justify-content:space-between; }
+header{
+background:white;
+padding:15px 0;
+border-bottom:1px solid #eee;
+}
 
-nav a { text-decoration:none; margin-left:10px; }
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+}
+
+.logo span{
+color:#0d6efd;
+}
+
+nav a{
+text-decoration:none;
+margin-left:15px;
+color:#111;
+}
 
 /* HERO */
-.hero { padding:30px 0; text-align:center; }
 
-/* BUTTONS */
-.btn { padding:10px 15px; color:#fff; text-decoration:none; border-radius:5px; }
-.call { background:#007bff; }
-.wa { background:#28a745; }
+.hero{
+padding:60px 0;
+text-align:center;
+}
 
-/* GRID */
-.grid { display:grid; grid-template-columns: repeat(2,1fr); gap:10px; }
+.hero h1{
+font-size:42px;
+margin-bottom:10px;
+}
 
-/* CARD */
-.card { background:#fff; padding:15px; border-radius:6px; }
+.hero p{
+color:#666;
+margin-bottom:25px;
+}
 
-.card:hover { background:#eee; }
+.btn{
+display:inline-block;
+padding:14px 22px;
+border-radius:8px;
+text-decoration:none;
+color:white;
+margin:5px;
+font-weight:bold;
+}
+
+.call{
+background:#0d6efd;
+}
+
+.wa{
+background:#25D366;
+}
+
+/* SERVICES */
+
+.services{
+padding:40px 0;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:12px;
+text-decoration:none;
+color:#111;
+transition:0.3s;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.card:hover{
+transform:translateY(-5px);
+background:#eef4ff;
+}
 
 /* FORM */
-.form { background:#fff; padding:15px; margin-top:20px; }
 
-input,select,textarea {
-width:100%;
-padding:8px;
-margin-bottom:8px;
+.form-box{
+background:white;
+padding:30px;
+border-radius:12px;
+margin-top:40px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
 }
 
-button {
+input,
+select,
+textarea{
 width:100%;
-padding:10px;
-background:#007bff;
-color:#fff;
+padding:14px;
+margin-bottom:12px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:15px;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+button{
+width:100%;
+padding:15px;
+background:#0d6efd;
+color:white;
 border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
 }
+
+button:hover{
+opacity:0.9;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+}
+
 </style>
 </head>
 
@@ -58,68 +170,105 @@ border:none;
 
 <header>
 <div class="container">
+
 <nav>
-<div><b>CoreAir</b></div>
-<div>
-<a href="#services">Services</a>
-<a href="#form">Book</a>
+
+<div class="logo">
+Core<span>Air</span>
 </div>
+
+<div>
+<a href="index.html">Home</a>
+</div>
+
 </nav>
+
 </div>
 </header>
 
 <section class="hero">
-<div class="container">
-<h1>AC Repair Dubai</h1>
-<p>Fast service. No hidden fees.</p>
 
-<a href="tel:+971580000000" class="btn call">Call</a>
-<a href="https://wa.me/971580000000" class="btn wa">WhatsApp</a>
+<div class="container">
+
+<h1>AC Repair in Dubai</h1>
+
+<p>
+Fast service. No hidden charges. Same day visit.
+</p>
+
+<a href="tel:+971580000000" class="btn call">
+Call Now
+</a>
+
+<a href="https://wa.me/971580000000" class="btn wa">
+WhatsApp
+</a>
+
 </div>
+
 </section>
 
-<section id="services" class="section">
+<section class="services">
+
 <div class="container">
-<h3>Services</h3>
+
+<h2>Our Services</h2>
 
 <div class="grid">
-<div class="card">AC Repair</div>
-<div class="card">AC Cleaning</div>
-<div class="card">AC Maintenance</div>
-<div class="card">AC Installation</div>
-</div>
+
+<a href="repair.html" class="card">
+<h3>AC Repair</h3>
+<p>Fast diagnostics and repair.</p>
+</a>
+
+<a href="cleaning.html" class="card">
+<h3>AC Cleaning</h3>
+<p>Deep cleaning for better cooling.</p>
+</a>
+
+<a href="maintenance.html" class="card">
+<h3>Maintenance</h3>
+<p>Prevent future breakdowns.</p>
+</a>
+
+<a href="installation.html" class="card">
+<h3>Installation</h3>
+<p>Professional AC installation.</p>
+</a>
 
 </div>
-</section>
 
-<section id="form" class="section">
-<div class="container">
+<div class="form-box">
 
-<div class="form">
-<h3>Book Service</h3>
+<h2>Book Service</h2>
 
 <form>
-<input type="text" placeholder="Name" required>
-<input type="tel" placeholder="Phone" required>
 
-<select required>
-<option value="">Select service</option>
+<input type="text" placeholder="Your Name">
+
+<input type="tel" placeholder="Phone Number">
+
+<select>
+<option>Select Service</option>
 <option>AC Repair</option>
 <option>AC Cleaning</option>
-<option>AC Maintenance</option>
-<option>AC Installation</option>
+<option>Maintenance</option>
+<option>Installation</option>
 </select>
 
 <textarea placeholder="Message"></textarea>
 
-<button type="submit">Send</button>
+<button type="submit">
+Send Request
+</button>
+
 </form>
+
 </div>
 
 </div>
+
 </section>
-
-<a href="https://wa.me/971580000000" class="float">WhatsApp</a>
 
 </body>
 </html>
